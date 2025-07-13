@@ -41,3 +41,8 @@ repos:
     require_serial: true
     language: system
     types_or: [python, pyi]
+  - id: pip-audit-uv
+    name: pip-audit using uv's venv
+    language: system
+    entry: uv run pip-audit
+    pass_filenames: false
