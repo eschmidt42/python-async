@@ -8,11 +8,15 @@ authors = [
 ]
 requires-python = ">=3.13"
 dependencies = [
+    "httpx>=0.28.1",
+    "inline-snapshot>=0.23.2",
     "pip-audit>=2.9.0",
     "pre-commit>=4.2.0",
     "pyleak>=0.1.14",
     "pytest>=8.4.1",
     "pytest-asyncio>=1.0.0",
+    "starlette>=0.47.1",
+    "uvicorn>=0.35.0",
 ]
 
 [build-system]
