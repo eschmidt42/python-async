@@ -1,3 +1,4 @@
+# https://youtu.be/ftmdDlwMwwQ?si=iwQDccvArQb55bbk
 # https://github.com/mCodingLLC/VideosSampleCode/blob/master/videos/117_hello_async/boring_async.py
 
 import asyncio
