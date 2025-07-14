@@ -1,37 +1,25 @@
 # Python async
 
-
-## References
+## Links to things
 
 * mcoding videos
-  * [x] [async intro](https://youtu.be/ftmdDlwMwwQ?si=h__zw_jOcgu_uk2v)
-    * `python src/python_async/mcoding/intro.py`
-  * [x] [async loops](https://youtu.be/dEZKySL3M9c?si=Te6GB75WsDLyzNEf)
-    * `python src/python_async/mcoding/for_loop/server.py` and `python src/python_async/mcoding/for_loop/client.py`
-  * [ ] [async web apps](https://youtu.be/oYrnTQAFH1Q?si=1CFzaqQ6OuTwuUvC)
-  * [x] [slow async code](https://youtu.be/m_a0fN48Alw?si=t9DeVmpV3bp7TPXH)
-  * [ ] [async functions vs classes](https://youtu.be/ai7y--6ElAE?si=c-aNmfwBRy306cBN)
-  * [ ] [async loop pitfall](https://youtu.be/N56Jrqc7SBk?si=UHr43C-a79T8-X0W)
-
-## Aspects to investigate
-
-* [ ] async tasks
-* [ ] async semaphores
-* [x] async loops
-* [ ] (async) Queue
-* [ ] (async) iterators
-* [ ] (async) generators
-* [x] testing async code using [pytest-asyncio](https://pypi.org/project/pytest-asyncio/)
-* common async pitfalls
-* [x] [pyleak](https://github.com/deepankarm/pyleak) - detecting async things
-* [x] [pip-audit](https://github.com/pypa/pip-audit) in pre-commit
-* [x] sort multithreading vs multiprocessing
-* [x] sort "thread-safe" -> [wiki](https://en.wikipedia.org/wiki/Thread_safety)
-* [ ] go through High-level APIs [page](https://docs.python.org/3/library/asyncio.html)
+  * [async intro](https://youtu.be/ftmdDlwMwwQ) -> `python src/python_async/mcoding/intro.py`
+  * [async loops](https://youtu.be/dEZKySL3M9c) -> `python src/python_async/mcoding/for_loop/server.py` and `python src/python_async/mcoding/for_loop/client.py`
+  * [slow async code](https://youtu.be/m_a0fN48Alw)
+  * [async loop pitfall](https://youtu.be/N56Jrqc7SBk) -> `python src/python_async/mcoding/generator_pitfall.py`
+  * [async functions vs classes](https://youtu.be/ai7y--6ElAE)
+  * [asgi fundamentals - startup and shutdown events](https://www.youtube.com/watch?v=_CzaciNrHRE)
+  * [asgi fundamentals - webapps](https://www.youtube.com/watch?v=oYrnTQAFH1Q)
+* [asgi docs](asgi.readthedocs.io)
+* [asyncio APIs](https://docs.python.org/3/library/asyncio.html)
+* [pytest-asyncio](https://pypi.org/project/pytest-asyncio/)
+* [pyleak](https://github.com/deepankarm/pyleak) - detecting dangling async coroutines
+* [pip-audit](https://github.com/pypa/pip-audit)
 * encode
   * [httpx](https://github.com/encode/httpx)
   * [starlette](https://github.com/encode/starlette)
   * [uvicorn](https://github.com/encode/uvicorn)
+
 
 ## multithreading vs multiprocessing
 
