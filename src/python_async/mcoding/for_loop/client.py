@@ -1,17 +1,20 @@
 import asyncio
 import hashlib
 import time
+import typing as T
 
 import httpx
 
 
-async def fake_file_data():
+async def fake_file_data() -> T.AsyncGenerator[bytes, T.Any]:
     yield b"hello, "
     await asyncio.sleep(0.1)  # fake lag
     yield b"world"
 
 
-async def await_rate_limited(awaitables, rate: float):
+async def await_rate_limited(
+    awaitables: T.Iterable[T.Awaitable[T.Any]], rate: float
+) -> T.AsyncGenerator[T.Any, None]:
     max_sleep_duration = 1 / rate
     for aw in awaitables:
         start = time.perf_counter()

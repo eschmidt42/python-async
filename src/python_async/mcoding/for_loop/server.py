@@ -1,5 +1,6 @@
 import hashlib
 import logging
+import typing as T
 
 from starlette.applications import Starlette
 from starlette.requests import Request
@@ -9,7 +10,7 @@ from starlette.routing import Route
 logger = logging.getLogger(__name__)
 
 
-async def online_sha256(stream) -> bytes:
+async def online_sha256(stream: T.AsyncGenerator[bytes, None]) -> bytes:
     hasher = hashlib.sha256()
     async for chunk in stream:
         logger.info(f"got chunk: {chunk}")
@@ -17,12 +18,12 @@ async def online_sha256(stream) -> bytes:
     return hasher.digest()
 
 
-async def compute_sha256(request: Request):
+async def compute_sha256(request: Request) -> PlainTextResponse:
     bytes_hash = await online_sha256(request.stream())
     return PlainTextResponse(bytes_hash)
 
 
-async def get_reverse(request: Request):
+async def get_reverse(request: Request) -> JSONResponse:
     try:
         body = await request.json()
         logger.info(f"{body=}")
